@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Escreve Aí!</title>
+</head>
+<body>
+  Escreve aí o que eu tô te dizendo!
+
+  <ul class="notas">
+  <% for(var i=0; i<notas.length; i++) {%>
+    <li class="quote">
+      <span><%= notas[i].nome %>:</span>
+      <span><%= notas[i].nota %></span>
+    </li>
+  <% } %>
+  </ul>
+
+  <form action="/notas" method="POST">
+    <input type="text" placeholder="Nome do abençoado" name="nome">
+    <input type="text" placeholder="Frase fantástica" name="nota">
+    <button type="submit">Anotar</button>
+  </form>
+</body>
+</html>
