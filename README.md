@@ -1,5 +1,4 @@
-# Escreve aí o que eu tô te dizendo!
-## Teste de Docker / Node.js / Express / MongoDB
+# Escreve aí o que eu tô te dizendo! (Docker / Node.js / Express / MongoDB)
 
 Solução para anotar todas as frases fantásticas daquele seu amigo que sabe tudo. 
 E de quebra estude Docker, Node.js, Express e MongoDB.
