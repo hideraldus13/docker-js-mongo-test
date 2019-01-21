@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Escreve Aí! - Notas</title>
+</head>
+<body>
+  Notas para a posteridade!
+
+  <ul class="notas">
+  <% for(var i=0; i<notas.length; i++) {%>
+    <li class="quote">
+      <span><%= notas[i].nome %>:</span>
+      <span><%= notas[i].nota %></span>
+    </li>
+  <% } %>
+  </ul>
+
+</body>
+</html>

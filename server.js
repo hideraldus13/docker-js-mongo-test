@@ -18,10 +18,10 @@ client.connect(config.DB, function(err, db) {
         console.log(err.message)
     }
     else {
-        console.log('connected!!');
+        console.log('conectado!!');
         banco = db.db('escreveai');
         app.listen(PORT, () => {
-            console.log('listening on 4000') 
+            console.log('online na porta 4000') 
         })
     }
 });  
@@ -31,14 +31,21 @@ app.get('/', (req, res) => {
       if (err) return console.log(err)
       res.render('index.ejs', {notas: result})
     })
-  })
+})
+
+app.get('/notas', (req, res) => {
+    banco.collection('notas').find().toArray((err, result) => {
+      if (err) return console.log(err)
+      res.render('notas.ejs', {notas: result})
+    })
+})
 
 app.post('/notas', (req, res) => {
     console.log(req.body)
     banco.collection('notas').save(req.body, (err, result) => {
         if (err) return console.log(err)
 
-        console.log('saved to database')
+        console.log('salvo na base')
         res.redirect('/')
     })
 });
